@@ -18,7 +18,7 @@ public class LoadNewArea : MonoBehaviour {
 		
 	}
 
-    void OnTriggerenter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
         {
