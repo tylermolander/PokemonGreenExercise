@@ -20,11 +20,11 @@ public class Movement2 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) && transform.position == pos)
         {
             pos += Vector3.left;
-            myAnimator.SetFloat("WalkLeft", 1f);
+            myAnimator.SetBool("WalkLeft", true);
         }        
         if (!Input.GetKey(KeyCode.LeftArrow) && transform.position == pos)
         {
-            myAnimator.SetFloat("WalkLeft", 0f);
+            myAnimator.SetBool("WalkLeft", false);
         }     
         
 
