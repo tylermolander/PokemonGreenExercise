@@ -874,3 +874,60 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701322446}
   m_CullTransparentMesh: 0
+--- !u!1001 &1899616883
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 51.475586
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 33.974472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.821373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814911077921890, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224675033251545494, guid: d6be3840acb1faa46aba4305557a46fc,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114566156322696558, guid: d6be3840acb1faa46aba4305557a46fc,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1899616884}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d6be3840acb1faa46aba4305557a46fc, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!95 &1899616884 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95115513269955814, guid: d6be3840acb1faa46aba4305557a46fc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1899616883}
