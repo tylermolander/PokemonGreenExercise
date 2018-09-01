@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement2 : MonoBehaviour
+public class @GridMove : MonoBehaviour
 {
 
     Vector3 pos; 

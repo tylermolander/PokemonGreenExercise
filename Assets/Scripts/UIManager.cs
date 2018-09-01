@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
     public Slider healthBar;
     public Text HPText;
-    //public PlayerHealthManager playerHealth;
+    public PlayerHealthManager playerHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +18,8 @@ public class UIManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    //healthBar.maxValue = playerHealth.playerMaxHealth;
-	    //healthBar.value = playerHealth.playerCurrentHealth;
+	    healthBar.maxValue = playerHealth.playerMaxHealth;
+	    healthBar.value = playerHealth.playerCurrentHealth;
         //HPText.text = "HP: " + playerHealth.playerCurrentHealth + "/" playerHealth.playerMaxHealth;
 	}
 }
