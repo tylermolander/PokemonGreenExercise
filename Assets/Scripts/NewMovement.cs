@@ -33,7 +33,7 @@ public class NewMovement : MonoBehaviour
 	            Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
 	        {
 	            myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed,
-	                Input.GetAxisRaw("Vertical") * speed);
+	                                               Input.GetAxisRaw("Vertical") * speed);
 	            playerMoving = true;
 	            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 	        }
