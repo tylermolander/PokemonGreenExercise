@@ -123,6 +123,7 @@ MonoBehaviour:
   MaxHealth: 30
   CurrentHealth: 0
   expToGive: 30
+  enemyQuestName: Pika
 --- !u!212 &212204840363195886
 SpriteRenderer:
   m_ObjectHideFlags: 1

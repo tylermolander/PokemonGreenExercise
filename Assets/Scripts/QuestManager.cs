@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
 
     public string itemCollected;
 
+    public string enemyKilled;
 
 	void Start () 
 	{

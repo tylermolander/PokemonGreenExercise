@@ -178,6 +178,58 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95115513269955814, guid: d6be3840acb1faa46aba4305557a46fc,
     type: 2}
   m_PrefabInternal: {fileID: 192879365}
+--- !u!1001 &323304314
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817940669063836, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212188766325801048, guid: f57db6ec5f6e22347975ae6e8060267f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1081124929
+      objectReference: {fileID: 0}
+    - target: {fileID: 212188766325801048, guid: f57db6ec5f6e22347975ae6e8060267f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f57db6ec5f6e22347975ae6e8060267f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &595675362
 GameObject:
   m_ObjectHideFlags: 0

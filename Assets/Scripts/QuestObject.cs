@@ -18,6 +18,11 @@ public class QuestObject : MonoBehaviour
     public bool isItemQuest;
     public string targetItem;
 
+    public bool isEnemyQuest;
+    public string targetEnemy;
+    public int enemiesToKill;
+    int enemyKillCount;
+    
 	void Start () 
 	{
 		
@@ -25,13 +30,27 @@ public class QuestObject : MonoBehaviour
 	
 	void Update () 
 	{
-	    if (isItemQuest)
+	    if(isItemQuest)
 	    {
 	        if (theQuestManager.itemCollected == targetItem)
 	        {
 	            theQuestManager.itemCollected = null;
 
 	            EndQuest();
+	        }
+	    }
+
+	    if (isEnemyQuest)
+	    {
+	        if (theQuestManager.enemyKilled == targetEnemy)
+	        {
+	            theQuestManager.enemyKilled = null;
+	            enemyKillCount++;
+	        }
+
+	        if (enemyKillCount >= enemiesToKill)
+	        {
+                EndQuest();
 	        }
 	    }
 	}
