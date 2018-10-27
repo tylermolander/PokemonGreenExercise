@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public Text HPText;
     public PlayerHealthManager playerHealth;
 
+    PlayerStats thePlayerStats;
+    public Text LevelText;
+
     static bool UIExists;
 
 
@@ -24,6 +27,8 @@ public class UIManager : MonoBehaviour
 	    {
 	        Destroy(gameObject);
 	    }
+
+	    thePlayerStats = GetComponent<PlayerStats>();
 	}
 	
 	void Update ()
@@ -31,5 +36,6 @@ public class UIManager : MonoBehaviour
 	    healthBar.maxValue = playerHealth.playerMaxHealth;
 	    healthBar.value = playerHealth.playerCurrentHealth;
         HPText.text = playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
+        LevelText.text = "Lvl: " + thePlayerStats.currentLevel;
 	}
 }

@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 30
   CurrentHealth: 0
+  expToGive: 30
 --- !u!212 &212204840363195886
 SpriteRenderer:
   m_ObjectHideFlags: 1

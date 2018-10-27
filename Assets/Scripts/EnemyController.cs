@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PikaEnemy : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float moveSpeed;
 

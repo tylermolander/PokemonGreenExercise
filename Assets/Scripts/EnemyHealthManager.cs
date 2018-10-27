@@ -9,9 +9,14 @@ public class EnemyHealthManager : MonoBehaviour
     public int MaxHealth;
     public int CurrentHealth;
 
+    PlayerStats thePlayerStats;
+
+    public int expToGive;
+
     void Start ()
     {
         CurrentHealth = MaxHealth;
+        thePlayerStats = FindObjectOfType<PlayerStats>();
     }
 	
     void Update () 
@@ -19,6 +24,7 @@ public class EnemyHealthManager : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
+            thePlayerStats.AddExperience(expToGive);  //when the enemy health is <= zero, add exp to the player
         }
     }
 

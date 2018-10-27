@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float moveSpeed;
+    float currentMoveSpeed;
+    public float diagonalMoveModifier;
+
     private Animator anim;
     bool playerMoving;
     public Vector2 lastMove;
@@ -44,11 +47,14 @@ public class PlayerController : MonoBehaviour
 	    {
 
 
+
+
+
 	        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f ||
 	            Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
 	        {
-	            myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed,
-	                                               Input.GetAxisRaw("Vertical") * speed);
+	            myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * currentMoveSpeed,
+	                                               Input.GetAxisRaw("Vertical") * currentMoveSpeed);
 	            playerMoving = true;
 	            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 	        }
@@ -71,6 +77,16 @@ public class PlayerController : MonoBehaviour
 	            myRigidbody.velocity = Vector2.zero; //freeze position
 	            anim.SetBool("Attack", true);
 	        }
+
+	        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f && Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f) //if both horizonal & vertical: slow down the moveSpeed to compensate
+	        {
+	            currentMoveSpeed = moveSpeed * diagonalMoveModifier;
+	        }
+	        else
+	        {
+	            currentMoveSpeed = moveSpeed;
+	        }
+
 
 	    }
 
