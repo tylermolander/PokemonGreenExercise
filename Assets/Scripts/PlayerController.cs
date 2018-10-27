@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public string startPoint;
 
+    public bool canMove;
+
 	void Start ()
 	{
 	    anim = GetComponent<Animator>();
@@ -36,19 +38,21 @@ public class PlayerController : MonoBehaviour
 	    {
             Destroy(gameObject);
 	    }
-
+	    canMove = true;
 	}
 	
 	void Update ()
 	{
 	    playerMoving = false;
 
+	    if (!canMove)
+	    {
+            myRigidbody.velocity = Vector2.zero;
+	        return;
+	    }
+
 	    if (!attacking)
 	    {
-
-
-
-
 
 	        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f ||
 	            Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)

@@ -24,16 +24,21 @@ public class DialogueHolder : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.L))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
-                //dMAn.ShowBox(dialogue);
-
                 if (!dMAn.dialogActive)
                 {
                     dMAn.dialogLines = dialogueLines;
                     dMAn.currentLine = 0;
                     dMAn.ShowDialogue();
                 }
+
+                if (transform.parent.GetComponent<VillagerMovement>() != null) //during a dialouge event, if the parent has a movement script...
+                {
+                    transform.parent.GetComponent<VillagerMovement>().canMove = false; //...stop the parent's movement
+
+                }
+
             }
         }
     }

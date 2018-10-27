@@ -20,13 +20,16 @@ public class VillagerMovement : MonoBehaviour
     int WalkDirection;
 
     public Collider2D walkZone;
-
     bool hasWalkZone;
+
+    public bool canMove;
+    DialogueManager theDialogueManager;
  
 
 	void Start ()
 	{
 	    myRigidbody2D = GetComponent<Rigidbody2D>();
+	    theDialogueManager = FindObjectOfType<DialogueManager>();
 
 	    waitCounter = waitTime;
 	    walkCounter = walkTime;
@@ -39,10 +42,23 @@ public class VillagerMovement : MonoBehaviour
 	        maxWalkPoint = walkZone.bounds.max;
 	        hasWalkZone = true;
 	    }
+
+	    canMove = true;
 	}
 	
 	void Update () 
 	{
+	    if (!theDialogueManager.dialogActive)
+	    {
+	        canMove = true;
+	    }
+	    
+	    if (!canMove)
+	    {
+	        myRigidbody2D.velocity = Vector2.zero;
+	        return;
+	    }
+	    
 	    if (isWalking)
 	    {
 	        walkCounter -= Time.deltaTime;
