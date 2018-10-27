@@ -10,16 +10,26 @@ public class UIManager : MonoBehaviour
     public Text HPText;
     public PlayerHealthManager playerHealth;
 
-	// Use this for initialization
-	void Start () {
-		
+    static bool UIExists;
+
+
+	void Start () 
+	{
+	    if (!UIExists)
+	    {
+	        UIExists = true;
+	        DontDestroyOnLoad(transform.gameObject);
+	    }
+	    else
+	    {
+	        Destroy(gameObject);
+	    }
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 	    healthBar.maxValue = playerHealth.playerMaxHealth;
 	    healthBar.value = playerHealth.playerCurrentHealth;
-        //HPText.text = "HP: " + playerHealth.playerCurrentHealth + "/" playerHealth.playerMaxHealth;
+        HPText.text = playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
 	}
 }

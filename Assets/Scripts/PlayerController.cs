@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Animator anim;
@@ -14,10 +14,22 @@ public class NewMovement : MonoBehaviour
     public float attackTime;
     private float attackTimeCounter;
 
+    static bool playerExists;
+
 	void Start ()
 	{
 	    anim = GetComponent<Animator>();
 	    myRigidbody = GetComponent<Rigidbody2D>();
+
+	    if (!playerExists)
+	    {
+	        playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+	    }
+	    else
+	    {
+            Destroy(gameObject);
+	    }
 
 	}
 	
