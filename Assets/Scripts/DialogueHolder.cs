@@ -24,7 +24,7 @@ public class DialogueHolder : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyUp(KeyCode.L))
             {
                 //dMAn.ShowBox(dialogue);
 
