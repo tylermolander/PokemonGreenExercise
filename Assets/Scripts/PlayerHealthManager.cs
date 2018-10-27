@@ -15,7 +15,7 @@ public class PlayerHealthManager : MonoBehaviour
 	
 	void Update () 
 	{
-	    if (playerCurrentHealth < 0)
+	    if (playerCurrentHealth <= 0)
 	    {
             gameObject.SetActive(false);
 	    }
