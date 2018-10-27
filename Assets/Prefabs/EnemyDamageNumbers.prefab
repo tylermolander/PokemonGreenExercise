@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114738443157146300}
   - component: {fileID: 114559282914758324}
   m_Layer: 5
-  m_Name: DamageNumbers
+  m_Name: EnemyDamageNumbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

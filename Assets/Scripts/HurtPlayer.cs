@@ -6,14 +6,19 @@ public class HurtPlayer : MonoBehaviour
 {
 
     public int damageToGive;
+    int currentDamage;
+    public GameObject damageNumber ;
 
-	// Use this for initialization
-	void Start () {
-		
+    PlayerStats thePlayerStats;
+
+	void Start () 
+	{
+	    thePlayerStats = FindObjectOfType<PlayerStats>();
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		
 	}
 
@@ -21,7 +26,18 @@ public class HurtPlayer : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
+            currentDamage = damageToGive - thePlayerStats.currentDefense;
+
+            if (currentDamage < 0)
+            {
+                currentDamage = 0;
+            }
+            
+            other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(currentDamage);
+
+            var clone = (GameObject) Instantiate(damageNumber, other.transform.position, Quaternion.Euler(Vector3.zero)); 
+            clone.GetComponent<FloatingNumbers>().damageNumber = currentDamage; 
+
         }
     }
 }

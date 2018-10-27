@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 	        }
 
 
-	        if (Input.GetKeyDown(KeyCode.Keypad0))
+	        if (Input.GetKeyDown(KeyCode.Mouse0))
 	        {
 	            attackTimeCounter = attackTime;
 	            attacking = true;
