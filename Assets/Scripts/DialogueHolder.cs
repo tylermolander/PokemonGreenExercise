@@ -24,7 +24,7 @@ public class DialogueHolder : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.L))
+            if (Input.GetKeyUp(KeyCode.Return))
             {
                 if (!dMAn.dialogActive)
                 {

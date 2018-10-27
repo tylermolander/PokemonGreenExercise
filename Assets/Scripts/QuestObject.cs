@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestObject : MonoBehaviour 
 {
+    //attached to each quest-object
 
     //think about what individual quests need to do;
     //set up, engaged (gameobject quest is active, unable to start again, reward...
@@ -14,6 +15,9 @@ public class QuestObject : MonoBehaviour
     public string startText;
     public string endText;
 
+    public bool isItemQuest;
+    public string targetItem;
+
 	void Start () 
 	{
 		
@@ -21,7 +25,15 @@ public class QuestObject : MonoBehaviour
 	
 	void Update () 
 	{
-		
+	    if (isItemQuest)
+	    {
+	        if (theQuestManager.itemCollected == targetItem)
+	        {
+	            theQuestManager.itemCollected = null;
+
+	            EndQuest();
+	        }
+	    }
 	}
 
     public void StartQuest()

@@ -10,6 +10,8 @@ public class QuestManager : MonoBehaviour
 
     public DialogueManager theDialogueManager;
 
+    public string itemCollected;
+
 
 	void Start () 
 	{

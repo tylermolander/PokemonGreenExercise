@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
 	void Update () 
 	{
-	    if (dialogActive && Input.GetKeyUp(KeyCode.L))
+	    if (dialogActive && Input.GetKeyUp(KeyCode.Return))
 	    {
 	        currentLine++;
 	    }
