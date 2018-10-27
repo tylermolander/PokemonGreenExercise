@@ -49,7 +49,7 @@ public class NewMovement : MonoBehaviour
 	        }
 
 
-	        if (Input.GetKeyDown(KeyCode.Keypad0))
+	        if (Input.GetKeyDown(KeyCode.Mouse0))
 	        {
 	            attackTimeCounter = attackTime;
 	            attacking = true;
