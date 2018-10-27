@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class LoadNewArea : MonoBehaviour {
 
     public string levelToLoad;
+    public string exitPoint;
+
+    PlayerController thePlayer;
 
 	// Use this for initialization
-	void Start () 
-    {
-		
+	void Start ()
+	{
+	    thePlayer = FindObjectOfType<PlayerController>();
+
 	}
 	
 	// Update is called once per frame
@@ -23,6 +27,7 @@ public class LoadNewArea : MonoBehaviour {
         if (other.gameObject.name == "Player")
         {
             SceneManager.LoadScene(levelToLoad);
+            thePlayer.startPoint = exitPoint;
         }
     }
 

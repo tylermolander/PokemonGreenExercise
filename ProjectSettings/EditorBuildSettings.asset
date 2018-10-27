@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Haus.unity
     guid: 65c8eef2df95f8e49b8b36448bb7ed5d
   - enabled: 1
-    path: Assets/Scenes/fightscreen.unity
-    guid: 56f3108eae4f2074685b124d3616fb1e
+    path: Assets/Scenes/HausBedroom.unity
+    guid: 0177154ef7bbe8d4b81c050fc5fc1378
   m_configObjects: {}

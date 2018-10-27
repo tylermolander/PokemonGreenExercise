@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Animator anim;
     bool playerMoving;
-    Vector2 lastMove;
+    public Vector2 lastMove;
+
     private Rigidbody2D myRigidbody; //use rigidbody to stop bouncing
 
     private bool attacking;
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private float attackTimeCounter;
 
     static bool playerExists;
+
+    public string startPoint;
 
 	void Start ()
 	{
