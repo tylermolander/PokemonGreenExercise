@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
 
+    //TODO: when level up, gain special abilities and unlock areas, etc. 
+
     public int currentLevel;
     public int currentExp;
     public int[] toLevelUp;
