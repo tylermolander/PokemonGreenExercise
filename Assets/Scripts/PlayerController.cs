@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
 	    }
 	    canMove = true;
+
+        lastMove = new Vector2(0, -1f);
 	}
 	
 	void Update ()
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
 	    if (!canMove)
 	    {
             myRigidbody.velocity = Vector2.zero;	    
-	        /**/anim.SetBool("PlayerMoving", playerMoving);
+	        /**///anim.SetBool("PlayerMoving", playerMoving);
             return;
 	    }
 

@@ -253,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHealth: 50
   playerCurrentHealth: 0
+  flashLength: 0.2
 --- !u!114 &114896921164161422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,11 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e01717ae04507d4192ae1c40b1fb184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 5
   diagonalMoveModifier: 0.6
   lastMove: {x: 0, y: 0}
   attackTime: 0.5
   startPoint: OrigionalSpawn
+  canMove: 0
 --- !u!212 &212172279826222046
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -301,8 +303,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1081124929
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 135bae84d0f2dc64981f673680d9d959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -347,8 +349,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1081124929
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: abd33d2c1ecc94e479102874ad9d2704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
