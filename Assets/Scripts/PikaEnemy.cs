@@ -17,7 +17,7 @@ public class PikaEnemy : MonoBehaviour
     private Vector3 moveDirection;
 
     public float waitToReload;
-    bool reloading;
+    bool reloading = false;
     GameObject thePlayer;
 
 	void Start ()

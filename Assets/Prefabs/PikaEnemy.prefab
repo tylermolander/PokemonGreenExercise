@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50396573803081068}
   - component: {fileID: 114230111246069950}
   - component: {fileID: 114571987819569168}
+  - component: {fileID: 114837052157908150}
   m_Layer: 0
   m_Name: PikaEnemy
   m_TagString: Enemy
@@ -106,6 +107,19 @@ MonoBehaviour:
   timeBetweenMove: 2
   timeToMove: 0.5
   waitToReload: 2
+--- !u!114 &114837052157908150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549543950178570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0290aecd221d24542b35c1307417ac95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 30
+  CurrentHealth: 0
 --- !u!212 &212204840363195886
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -72,8 +72,8 @@ GameObject:
   - component: {fileID: 212296041132113830}
   - component: {fileID: 50787336160479216}
   - component: {fileID: 95661957273404330}
-  - component: {fileID: 114141743327640276}
   - component: {fileID: 61654975346248628}
+  - component: {fileID: 114141743327640276}
   - component: {fileID: 114574355798503080}
   m_Layer: 0
   m_Name: Player
@@ -234,7 +234,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -245,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.875, y: 1}
+  m_Size: {x: 0.84, y: 0.54}
   m_EdgeRadius: 0
 --- !u!81 &81883599855620934
 AudioListener:
@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  attackTime: 0.5
 --- !u!114 &114574355798503080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,6 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbeb993b667e29488a15b2f4bf9260f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
+  damageBurst: {fileID: 0}
 --- !u!212 &212296041132113830
 SpriteRenderer:
   m_ObjectHideFlags: 1
