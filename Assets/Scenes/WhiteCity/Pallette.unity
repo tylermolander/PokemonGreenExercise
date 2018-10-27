@@ -113,6 +113,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1491902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491905}
+  - component: {fileID: 1491904}
+  - component: {fileID: 1491903}
+  m_Layer: 0
+  m_Name: Quest 2 Trigger Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1491903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108b31ae806b72a4ea8f2d6d430de83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 2
+  startQuest: 1
+  endQuest: 0
+--- !u!61 &1491904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!4 &1491905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.630769, y: 7.2789984, z: -0.03808394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172371369}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &20617169
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +952,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: Haus
   exitPoint: Outside:MainRoom Spawn
+--- !u!1 &172371368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172371369}
+  m_Layer: 0
+  m_Name: QuestTriggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172371369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172371368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7007763, y: 2.780999, z: 0.3896464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1491905}
+  - {fileID: 1344140211}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189973267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &303163140
 Transform:
   m_ObjectHideFlags: 0
@@ -2043,7 +2142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &522063569
 Transform:
   m_ObjectHideFlags: 0
@@ -2934,7 +3033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &694316010
 Transform:
   m_ObjectHideFlags: 0
@@ -4108,7 +4207,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ea5a8ccc46dcd9a499f1001820f8063a, type: 3}
-  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0.8666667}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0.43529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4774,8 +4873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235.5, y: -56.5}
-  m_SizeDelta: {x: 1109.69, y: 155.16}
+  m_AnchoredPosition: {x: 210, y: -61}
+  m_SizeDelta: {x: 1416.8, y: 155.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072373232
 MonoBehaviour:
@@ -4798,11 +4897,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fdf85909c6d5ff948809902d2fd7678d, type: 3}
-    m_FontSize: 66
+    m_FontSize: 84
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 73
+    m_MaxSize: 84
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5777,8 +5876,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.1, y: 11.5}
-  m_SizeDelta: {x: 2360.62, y: 514.96}
+  m_AnchoredPosition: {x: 13, y: 14}
+  m_SizeDelta: {x: 3303.9, y: 515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275123456
 MonoBehaviour:
@@ -5806,7 +5905,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 264
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5997,6 +6096,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1344140209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344140211}
+  - component: {fileID: 1344140210}
+  - component: {fileID: 1344140212}
+  m_Layer: 0
+  m_Name: Quest 2 Trigger End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1344140210
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344140209}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!4 &1344140211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344140209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8407605, y: 15.829001, z: -0.03808394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172371369}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344140212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344140209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108b31ae806b72a4ea8f2d6d430de83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 2
+  startQuest: 0
+  endQuest: 1
 --- !u!1 &1347205014
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,7 +6809,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6848afc23df2f88489fee55a8326da6e, type: 3}
-  m_Color: {r: 0.83183515, g: 0.8773585, b: 0.83183515, a: 0.8117647}
+  m_Color: {r: 0.83183515, g: 0.8773585, b: 0.83183515, a: 0.38431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8511,7 +8679,7 @@ MonoBehaviour:
   - {fileID: 1911121419}
   - {fileID: 2065977400}
   questCompleted: 
-  theDialogueManager: {fileID: 0}
+  theDialogueManager: {fileID: 1022961641}
 --- !u!1 &1911121417
 GameObject:
   m_ObjectHideFlags: 0
@@ -8780,8 +8948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 2
   theQuestManager: {fileID: 1905486568}
-  startText: 
-  endText: 
+  startText: 'Quest 2:   Go Up A Bit'
+  endText: You Completed Quest 2.
 --- !u!1 &2074212810
 GameObject:
   m_ObjectHideFlags: 0

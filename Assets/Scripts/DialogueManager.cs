@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
 	void Update () 
 	{
-	    if (dialogActive && Input.GetKeyUp(KeyCode.Space))
+	    if (dialogActive && Input.GetKeyUp(KeyCode.L))
 	    {
 	        currentLine++;
 	    }
@@ -52,5 +52,6 @@ public class DialogueManager : MonoBehaviour
         dialogActive = true;
         dBox.SetActive(true);
         thePlayer.canMove = false;
+        //suspend animations
     }
 }

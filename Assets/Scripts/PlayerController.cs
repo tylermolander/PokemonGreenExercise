@@ -47,8 +47,9 @@ public class PlayerController : MonoBehaviour
 
 	    if (!canMove)
 	    {
-            myRigidbody.velocity = Vector2.zero;
-	        return;
+            myRigidbody.velocity = Vector2.zero;	    
+	        /**/anim.SetBool("PlayerMoving", playerMoving);
+            return;
 	    }
 
 	    if (!attacking)
